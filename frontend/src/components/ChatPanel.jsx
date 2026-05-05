@@ -3,6 +3,8 @@ import { Send, Bot, User, Globe, Trash2, Loader } from 'lucide-react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
+import { API_BASE_URL } from "../config/api"; // edit only this line
+
 async function streamChat(message, history, currentFile, currentCode, onChunk) {
   const res = await fetch('/api/chat', {
     method: 'POST',
