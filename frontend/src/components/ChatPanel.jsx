@@ -8,7 +8,7 @@ import { API_BASE_URL } from "../config/api";
 
 // ---------------- STREAM CHAT ----------------
 async function streamChat(message, history, currentFile, currentCode, onChunk) {
-  const res = await fetch(`${API_BASE_URL}/chat`, {
+  const res = await fetch(`${API_BASE_URL}/api/chat`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -48,7 +48,7 @@ async function streamChat(message, history, currentFile, currentCode, onChunk) {
 
 // ---------------- WEB SEARCH ----------------
 async function webSearch(query) {
-  const res = await fetch(`${API_BASE_URL}/search-web`, {
+  const res = await fetch(`${API_BASE_URL}/api/search-web`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ query }),
